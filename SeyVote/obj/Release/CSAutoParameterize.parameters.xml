@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="SQLAzureConnection-Web.config Connection String" description="SQLAzureConnection Connection String used in web.config by the application to access the database." defaultValue="&#xD;&#xA;         Data Source=tcp:xtakyigu0h.database.windows.net;&#xD;&#xA;         Initial Catalog=SeyVote;   &#xD;&#xA;         User ID=dbuser@xtakyigu0h; &#xD;&#xA;         Password=!314970o;     &#xD;&#xA;         Encrypt=true;      &#xD;&#xA;         Trusted_Connection=false;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Alex\\documents\\visual\ studio\ 2013\\Projects\\SeyVote\\SeyVote\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SQLAzureConnection']/@connectionString" />
+  </parameter>
+</parameters>

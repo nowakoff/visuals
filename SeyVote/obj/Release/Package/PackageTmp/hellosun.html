@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    Hello World
+    <div id="helloWorld"></div>
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script>
+        $(document).ready(function () {
+            console.log("hello");
+            $.ajax({
+                url: "http://icnightschool.azurewebsites.net/json.aspx",
+                success: function (result) {
+                    console.log('works');
+                    var j = JSON.parse(result);
+                    $(j.Partners).each(function (i, val) {
+                        $('body').append('<button>' + val[i + 2] + '</button>');
+                    });
+
+
+                }
+            });
+        });
+
+
+    </script>
+
+
+</body>
+</html>

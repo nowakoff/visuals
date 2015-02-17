@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="https://code.jquery.com/mobile/git/jquery.mobile-git.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/git/jquery.mobile-git.css" />
+    <title>Vote</title>
+</head>
+<body>
+    <form id="postvote">
+        <label>
+            <input type="text" name="choice" value="Yes">Yes
+        </label>
+        <label>
+            <input type="radio" name="choice" value="No">No
+        </label>
+        <input type="hidden" name="partnerId" value="900">
+        <input type="hidden" name="voteId" value="2">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#postvote").submit(function () {
+            $.ajax({
+                type: "POST",
+                url: "postvote.aspx",
+                data: $(this).serialize(),
+                complete: function (data) {
+                    window.location = 'votelist.html';
+                }
+            });
+
+        });
+    });
+</script>
+
+
+
+</html>
